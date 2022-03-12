@@ -18,10 +18,12 @@ const defaultAffairs: any = [ // need to fix any
 // pure helper functions
 export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
     if (filter === 'all') return affairs
-    else return // need to fix
+    else return affairs.filter((el: any) => filter === el.priority)
 }
 export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-    return // need to fix
+    return (
+        affairs.filter( (el: any) => el._id !== _id)
+    )
 }
 
 function HW2() {
