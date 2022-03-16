@@ -1,7 +1,14 @@
 .someClass {
-
+    border: 1px solid green;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.errorMessage {
+    font-size: 14px;
+    margin-top: 3px;
+    color: darkred;
+    font-weight: bold;
 }
