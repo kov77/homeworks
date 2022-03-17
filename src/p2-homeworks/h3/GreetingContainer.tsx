@@ -1,11 +1,14 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import Greeting from './Greeting'
+import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
-    setUsers: any
+    users: UserType[]
+    addUserCallback: (name: string) => void
+    setUsers: ([]) => void
+
 }
+
 
 // более простой и понятный для новичков
 // function GreetingContainer(props: GreetingPropsType) {
@@ -13,9 +16,10 @@ type GreetingContainerPropsType = {
 // более современный и удобный для про :)
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback, setUsers}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
-    const setNameCallback = (e: any) => { // need to fix any
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+
         setName((e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)).replace(/[^a-zA-Z]/g, "").replace(/\s+/g, ''))
     }
     const addUser = () => {

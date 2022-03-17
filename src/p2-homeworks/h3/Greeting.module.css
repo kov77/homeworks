@@ -1,9 +1,14 @@
 .someClass {
     border: 1px solid green;
+    outline: green;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.error:focus-visible {
+    outline: 1px solid red;
 }
 
 .errorMessage {
