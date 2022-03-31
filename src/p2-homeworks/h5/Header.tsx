@@ -1,10 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import {PATH} from "./Routes";
+import Error404 from "./pages/Error404";
+import classes from "./Header.module.css"
 
 function Header() {
     return (
-        <div>
-            // add NavLinks
-
+        <div className={classes.header}>
+            <NavLink className={classes.navClass} to={PATH.PRE_JUNIOR}>Pre-Junior</NavLink>
+            <NavLink className={classes.navClass} to={PATH.JUNIOR}>Junior</NavLink>
+            <NavLink className={classes.navClass} to={PATH.JUNIOR_PLUS}>Junior-Plus</NavLink>
         </div>
     )
 }

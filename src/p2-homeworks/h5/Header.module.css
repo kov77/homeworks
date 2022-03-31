@@ -1,0 +1,45 @@
+.header {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    flex-wrap: nowrap;
+    transform: translateX(-280px);
+    transition-duration: 1200ms;
+}
+
+.header:hover {
+    transform: translateX(0px);
+
+}
+
+.header:after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '\2192';
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    background: green;
+    border-radius: 50%;
+}
+
+
+
+.navClass {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    margin-right: 10px;
+}
+
+.navClass:hover {
+    text-shadow: 0 0 10px;
+}
+
+
+
