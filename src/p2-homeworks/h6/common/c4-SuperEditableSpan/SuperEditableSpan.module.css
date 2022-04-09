@@ -1,0 +1,14 @@
+.editableSpan {
+    margin: 20px 5px;
+    color: darkgrey;
+
+}
+.editableSpan:after {
+    position: absolute;
+    content: "\270F";
+    transform: rotate(110deg);
+    color: black;
+    font-size: 15px;
+    margin-left: 3px;
+    opacity: 0.6;
+}

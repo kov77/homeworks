@@ -22,7 +22,7 @@ function RoutesComponent() {
                     <Route path={PATH.JUNIOR} element={<Junior/>}/>
                     <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
 
-                    <Route element={<Error404/>}/>
+                    <Route path={'/*'} element={<Error404/>}/>
             </Routes>
         </div>
     )
