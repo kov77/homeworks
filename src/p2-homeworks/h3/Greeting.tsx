@@ -7,7 +7,7 @@ type GreetingPropsType = {
     addUser: () => void
     error: string
     totalUsers: number
-    setUsers: ([]) => void
+    setUsers: (array: any) => void
 }
 
 // презентационная компонента (для верстальщика)

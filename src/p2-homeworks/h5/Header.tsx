@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {PATH} from "./Routes";
-import Error404 from "./pages/Error404";
 import classes from "./Header.module.css"
 
 function Header() {
