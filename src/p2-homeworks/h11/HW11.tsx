@@ -1,11 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
-import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import RangeSlider from './common/c8-SuperDoubleRange/SuperDoubleRange2'
+import './common/c8-SuperDoubleRange/SuperDoubleRange2.css'
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [values, setValues] = React.useState<number[]>([20, 75]);
 
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        setValues(newValue as number[]);
+    };
+
+    const setSuperRangeValue = (value: number) => {
+        setValues([value, values[1]])
+    }
     return (
         <div>
             <hr/>
@@ -13,18 +20,22 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <span>{values[0]}</span>
                 <SuperRange
+                    value={values[0]}
+                    onChangeRange={setSuperRangeValue}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+            <div style={{display: "flex", marginTop: "30px"}}>
+                <span>{values[0]}</span>
+
+                <RangeSlider
+                    value={values}
+                    handleChange={handleChange}
                 />
-                <span>{value2}</span>
+                <span>{values[1]}</span>
             </div>
 
             <hr/>
