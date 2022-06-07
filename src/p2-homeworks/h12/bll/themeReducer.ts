@@ -1,14 +1,22 @@
 const initState = {
-
+    theme : 'some'
 };
 
-export const themeReducer = (state = initState, action: any): any => { // fix any
+export type themeStateType = {theme: string}
+
+
+export const themeReducer = (state = initState, action: {type: string}): themeStateType => {
     switch (action.type) {
-        case "": {
-            return state;
+        case "RED-INPUT": {
+            return {...state, theme: 'red'};
+        }
+        case "DARK-INPUT": {
+            return {...state, theme: 'dark'};
+        }
+        case "SOME-INPUT": {
+            return {...state, theme: 'some'};
         }
         default: return state;
     }
 };
 
-export const changeThemeC = (): any => {}; // fix any

@@ -1,7 +1,7 @@
 import React from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import RangeSlider from './common/c8-SuperDoubleRange/SuperDoubleRange2'
-import './common/c8-SuperDoubleRange/SuperDoubleRange2.css'
+
 
 function HW11() {
     const [values, setValues] = React.useState<number[]>([20, 75]);

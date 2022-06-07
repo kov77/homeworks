@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import './SuperDoubleRange2.css'
+
 
 
 type RangeSliderPropsType = {
@@ -18,10 +18,10 @@ function valuetext(value: number) {
 
 export default function RangeSlider(props: RangeSliderPropsType) {
 
-
     return (
         <Box sx={{ width: 120}}>
             <Slider
+                classes={{}}
                 getAriaLabel={() => 'Temperature range'}
                 value={props.value}
                 onChange={props.handleChange}
